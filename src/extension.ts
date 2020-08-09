@@ -8,8 +8,7 @@ import { Uri, workspace } from 'vscode';
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-	let workSpaceFloder: any = vscode.workspace.getWorkspaceFolder(vscode.Uri.parse("scheme:with/path"));
-	let rootPath = workSpaceFloder.name;
+	let rootPath: any = vscode.workspace.rootPath;
 	const nodeDependenciesProvider = new DepNodeProvider(rootPath);
 	vscode.window.registerTreeDataProvider('nodeDependencies', nodeDependenciesProvider);
 }
