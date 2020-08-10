@@ -8,9 +8,7 @@ import { Uri, workspace } from 'vscode';
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-	let rootPath: any = vscode.workspace.rootPath;
-	const nodeDependenciesProvider = new DepNodeProvider(rootPath);
-	vscode.window.registerTreeDataProvider('nodeDependencies', nodeDependenciesProvider);
+	vscode.window.registerTreeDataProvider('nodeDependencies', new DepNodeProvider());
 }
 
 // this method is called when your extension is deactivated
