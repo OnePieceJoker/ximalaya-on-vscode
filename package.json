@@ -10,23 +10,24 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:ximalaya-on-vscode.helloWorld"
+		"onCommand:ximalaya-on-vscode.helloWorld",
+		"onView:xiMaLaYaExplorer"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"viewsContainers": {
 			"activitybar": [
 				{
-					"id": "package-explorer",
+					"id": "ximalaya",
 					"title": "XiMaLaYa",
 					"icon": "media/dep.svg"
 				}
 			]
 		},
 		"views": {
-			"package-explorer": [
+			"ximalaya": [
 				{
-					"id": "nodeDependencies",
+					"id": "xiMaLaYaExplorer",
 					"name": "Joker Dependencies",
 					"icon": "media/dep.svg",
 					"contextualTitle": "XiMaLaYa"
